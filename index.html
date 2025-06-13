@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção de Geolocalização</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f4c81 0%, #1a6fba 100%);
+        }
+        
+        .script-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-style: italic;
+        }
+        
+        .agent-note {
+             background-color: #fffbeb;
+             border: 1px solid #fcd34d;
+             border-left-width: 4px;
+             padding: 1rem;
+             border-radius: 0.5rem;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Geolocalização de IP Incorreta</h1>
+                <p class="text-xl opacity-90">Guia para orientar clientes cujo conteúdo de streaming ou canais aparece como se estivessem em outro estado.</p>
+                <div class="mt-10">
+                    <a href="#roteiro-atendimento" class="bg-white text-blue-700 font-medium px-6 py-3 rounded-lg hover:bg-blue-50 transition duration-300">Ver Roteiro de Diálogo</a>
+                    <a href="#passo-a-passo-correcao" class="bg-transparent border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300">Ver Passo a Passo</a>
+                </div>
+            </div>
+        </div>
+        
+        <svg class="w-full h-16 text-gray-100 block" viewBox="0 0 1440 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48h1440V0c-211.98 21.297-433.96 37.297-720 37.297S211.98 21.297 0 0v48z"></path>
+        </svg>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="roteiro-atendimento" class="max-w-4xl mx-auto mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Roteiro de Diálogo com o Cliente</h2>
+                <p class="text-lg text-gray-600">Siga estes passos para um atendimento claro e eficiente.</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Passo 1: Identificar e Explicar a Causa</h3>
+                    <p class="text-gray-600 mb-4">Valide o problema do cliente e explique a causa de forma simples.</p>
+                    <div class="script-box">
+                        <p class="text-gray-800">"Olá, Sr(a). [Nome do Cliente]. Entendo que os canais do(a) senhor(a) ou o serviço de streaming estão exibindo a programação de outro estado. Isso é algo que podemos resolver."</p>
+                        <p class="mt-2 text-gray-800">"Isso geralmente acontece por um motivo simples: o 'mapa' que os serviços de streaming usam para localizar sua conexão na internet às vezes tem uma informação desatualizada para o seu endereço de IP. Nosso trabalho será pedir a eles que corrijam essa informação no mapa."</p>
+                    </div>
+                </div>
+
+                <div class="border-t pt-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Passo 2: Iniciar o Processo de Correção</h3>
+                    <p class="text-gray-600 mb-4">Peça a colaboração do cliente para obter a informação necessária: o endereço IP público dele.</p>
+                    <div class="script-box">
+                        <p class="text-gray-800">"Para podermos solicitar a correção, primeiro precisamos saber qual é o seu endereço de IP atual. O(A) senhor(a) poderia, por favor, acessar um site rápido para mim em seu computador ou celular?"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="passo-a-passo-correcao" class="max-w-4xl mx-auto mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Passo a Passo Detalhado da Correção</h2>
+                <p class="text-lg text-gray-600">Guie o cliente (ou execute você mesmo) através deste processo.</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 space-y-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">1. Obter o Endereço IP do Cliente</h3>
+                    <p class="text-gray-700 mb-4">Peça ao cliente para acessar o site <a href="https://www.meuip.com.br" target="_blank" class="text-blue-600 hover:underline">www.meuip.com.br</a> e informar o número que aparece em destaque.</p>
+                    <div class="agent-note">
+                        <p class="font-bold text-yellow-800">Anote o endereço IP informado pelo cliente.</p>
+                    </div>
+                </div>
+
+                <div class="border-t pt-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2. Acessar a Ferramenta de Correção MaxMind</h3>
+                    <p class="text-gray-700 mb-4">Com o IP em mãos, acesse (ou peça para o cliente acessar) o formulário de correção no site da MaxMind.</p>
+                    <a href="https://www.maxmind.com/en/geoip-location-correction" target="_blank" class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Abrir Ferramenta de Correção MaxMind
+                    </a>
+                </div>
+                
+                <div class="border-t pt-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">3. Preencher e Enviar o Formulário</h3>
+                    <p class="text-gray-700 mb-4">Preencha os campos do formulário com as informações corretas do cliente. Os campos obrigatórios geralmente são:</p>
+                     <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        <li><strong>IP Address:</strong> Cole o IP que o cliente informou.</li>
+                        <li><strong>Country:</strong> Brasil</li>
+                        <li><strong>State/Province:</strong> O estado correto do cliente.</li>
+                        <li><strong>City:</strong> A cidade correta do cliente.</li>
+                        <li><strong>Postal Code:</strong> O CEP correto do cliente.</li>
+                     </ul>
+                     <p class="text-gray-700 mt-4">Após preencher, envie o formulário.</p>
+                </div>
+
+                 <div class="border-t pt-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">4. Alinhar Expectativas</h3>
+                    <p class="text-gray-600 mb-4">É crucial informar ao cliente que a mudança não é imediata.</p>
+                    <div class="script-box">
+                        <p class="text-gray-800">"Pronto, Sr(a). [Nome do Cliente], a solicitação para corrigir a localização do seu IP foi enviada com sucesso. É muito importante que o(a) senhor(a) saiba que essa atualização pode levar alguns dias, ou em alguns casos, até uma ou duas semanas para ser processada por todos os serviços de streaming. Por favor, acompanhe nos próximos dias para ver se a programação já foi corrigida."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq-agente" class="max-w-4xl mx-auto mb-20">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Perguntas Frequentes (Para o Atendente)</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="divide-y divide-gray-200">
+                    <div class="faq-item">
+                        <button class="faq-question w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                            <span>O que fazer se o cliente não quiser/conseguir acessar os sites?</span>
+                            <svg class="faq-arrow h-5 w-5 text-gray-500 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-6 py-4 bg-gray-50 hidden">
+                            <p class="text-gray-700">Se houver resistência, você pode obter o IP do cliente através de um acesso remoto via anydesk (se disponível) e preencher o formulário da MaxMind em nome dele. Apenas confirme os dados de cidade e estado para garantir a precisão.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                            <span>Reiniciar o modem não resolve, trocando o IP?</span>
+                            <svg class="faq-arrow h-5 w-5 text-gray-500 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-6 py-4 bg-gray-50 hidden">
+                            <p class="text-gray-700">Pode resolver temporariamente. Como os IPs são dinâmicos, ao reiniciar o modem o cliente pode receber um novo IP que tenha a geolocalização correta. Você pode sugerir isso como uma tentativa rápida, mas informe que a correção definitiva para o IP problemático (que pode voltar para ele no futuro) é feita pelo site da MaxMind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="text-center">
+                <p class="text-gray-400">©2025 Alison Braga da Silva</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const answer = item.querySelector('.faq-answer');
+                    const arrow = item.querySelector('.faq-arrow');
+                    
+                    const isHidden = answer.classList.contains('hidden');
+                    
+                    if (isHidden) {
+                        answer.classList.remove('hidden');
+                        arrow.classList.add('rotate-180');
+                    } else {
+                        answer.classList.add('hidden');
+                        arrow.classList.remove('rotate-180');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 60,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
